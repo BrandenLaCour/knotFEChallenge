@@ -44,7 +44,7 @@ function App() {
       </div>
       <div className="container search">
         <form onSubmit={handleFormSubmit}>
-          <label>
+          <label for="search">
             Search:
             <input
               type="text"
@@ -53,15 +53,16 @@ function App() {
               onChange={(e) => setSearchInput(e.target.value)}
             />
           </label>
-          <label htmlFor="type">Choose a product type:</label>
-          <select
-            onChange={(e) => setProductType(e.target.value)}
-            value={productType}
-          >
-            <option value="ALL">All</option>
-            <option value="RETAIL">Retail</option>
-            <option value="CASH">Cash</option>
-          </select>
+          <label for="product type" >
+            <select
+              onChange={(e) => setProductType(e.target.value)}
+              value={productType}
+              name="productType"
+            >
+              <option value="RETAIL">Retail</option>
+              <option value="CASH">Cash</option>
+            </select>
+          </label>
         </form>
       </div>
 
