@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import API from "./api";
-import Card from "./components/Card";
+import getProduct from "./api/products";
+import Card from "./components/Card/Card";
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   const [productType, setProductType] = useState("");
 
   useEffect(() => {
-    API.getProduct().then((res) => {
+    getProduct().then((res) => {
       setProducts(res.data);
     });
   }, []);
@@ -44,20 +44,22 @@ function App() {
       </div>
       <div className="container search">
         <form onSubmit={handleFormSubmit}>
-          <label for="search">
+          <label htmlFor="search">
             Search:
             <input
               type="text"
               name="search"
+              id="search"
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
             />
           </label>
-          <label for="product type" >
+          <label htmlFor="productType" >
             <select
               onChange={(e) => setProductType(e.target.value)}
               value={productType}
               name="productType"
+              id="productType"
             >
               <option value="RETAIL">Retail</option>
               <option value="CASH">Cash</option>
