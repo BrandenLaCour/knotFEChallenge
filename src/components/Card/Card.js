@@ -18,7 +18,7 @@ function Card({ cardResults: { name, image, type, brandName, price, storeName } 
       )}
       <h1 className="card-title">{name}</h1>
       <img
-        alt="alt"
+        alt={name}
         src={image}
         style={{ maxWidth: 100, maxHeight: "auto" }}
       ></img>
