@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import getProduct from "./api/products";
-import HomePage from "./views/HomePage";
+import ProductsView from "./views/ProductsView";
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <HomePage products={products} />
+      <ProductsView products={products} />
     </>
   );
 }
