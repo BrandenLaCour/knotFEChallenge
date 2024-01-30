@@ -12,3 +12,9 @@
 .card p {
   margin-bottom: 0;
 }
+
+.card-image {
+  max-width: 100px;
+  max-height: auto;
+
+}

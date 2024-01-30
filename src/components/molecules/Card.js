@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Card.css";
 
-function Card({ cardResults: { name, image, type, brandName, price, storeName } }) {
+const Card = ({ cardResults: { name, image, type, brandName, price, storeName } }) => {
   const [clicked, setClicked] = useState(false)
 
   const handleClick = () => {
@@ -20,7 +20,7 @@ function Card({ cardResults: { name, image, type, brandName, price, storeName } 
       <img
         alt={name}
         src={image}
-        style={{ maxWidth: 100, maxHeight: "auto" }}
+        className="card-image"
       ></img>
       <p>Type: {type}</p>
       <p>Brand: {brandName}</p>
