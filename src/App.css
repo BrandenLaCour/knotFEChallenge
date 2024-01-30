@@ -13,7 +13,8 @@
   align-items: center;
 }
 
-.search input, .search select {
+.search input,
+.search select {
   margin: 0 16px;
   padding: 8px;
   border: 1px solid #ccc;
@@ -28,4 +29,7 @@
 
 .footer {
   margin-top: 30px;
+  display: block;
+  text-align: center;
+
 }
